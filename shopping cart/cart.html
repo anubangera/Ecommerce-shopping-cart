@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" class="rel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add your styles here */
+        .cart-info img {
+            width: 100px;
+            /* Adjust the size as needed */
+            height: auto;
+        }
+
+        .total-price {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" width="50px" alt="Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Products</a></li>
+
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart1.png" width="30px" height="30px" alt="Cart"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Item Details -->
+    <div class="small-container cart-page">
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td id="tax">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total">$0.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            console.log(cart); // Debugging line to check the cart contents
+            let cartTableBody = document.querySelector('#cart-table tbody');
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                let row = document.createElement('tr');
+
+                row.innerHTML = `
+            <td>
+                <div class="cart-info">
+                    <img src="${item.imageUrl}" alt="${item.name}">
+                    <div class="pcontainer">
+                        <p>${item.name}</p>
+                        <small>Price: $${item.price.toFixed(2)}</small><br>
+                        <a href="#" onclick="removeFromCart('${item.name}')">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="${item.quantity}" onchange="updateQuantity('${item.name}', this.value)"></td>
+            <td>$${(item.price * item.quantity).toFixed(2)}</td>
+        `;
+
+                cartTableBody.appendChild(row);
+                subtotal += item.price * item.quantity;
+            });
+
+            // Update total price (assuming 7% tax rate for example)
+            let tax = subtotal * 0.07;
+            let total = subtotal + tax;
+
+            document.querySelector('#subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.querySelector('#tax').textContent = `$${tax.toFixed(2)}`;
+            document.querySelector('#total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(name) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.name !== name);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload(); // Reload the page to reflect changes
+        }
+
+        function updateQuantity(name, quantity) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let item = cart.find(item => item.name === name);
+
+            if (item) {
+                item.quantity = parseInt(quantity);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                location.reload(); // Reload the page to reflect changes
+            }
+        }
+
+        // Load the cart items when the page is loaded
+        window.onload = loadCart;
+        //localStorage.clear();
+
+    </script>
+</body>
+
+</html>
