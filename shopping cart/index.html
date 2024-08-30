@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>urban store</title>
+    <link rel="stylesheet" href="style.css" class="rel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpg" width="50px">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#categories" id="scrolltoproducts">Products</a></li>
+
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart1.png" width="30px" height="30px"></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <h1>The Fashion Experience <br>You Deserve New Style!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut?</p>
+                    <button class="btn" id="scrolltoexplore">Explore Now &#8594;</button>
+                </div>
+                <div class="col-2">
+                    <img src="images/shopping.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------featured category--------->
+    <div class="categories1">
+        <div class="small-container">
+            <h2 style="margin-bottom: 20px;">Explore the collections</h2>
+            <div class="row">
+
+                <!-- Straight leg pant -->
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="images/pant/pant1.webp" alt="Straight leg jeans" class="main-image">
+                        <img src="images/pant/pant2.webp" alt="Alternate view of straight leg jeans"
+                            class="hover-image">
+                        <div class="quick-view">
+                            <a href="#" class="open-modal" data-modal="modal1" data-product-name="Straight leg pant"
+                                data-product-price="99" data-product-image="images/pant/pant1.webp">Quick View</a>
+                        </div>
+                    </div>
+                    <h4>Straight Leg Jeans</h4>
+                    <p>$99.00</p>
+                </div>
+                <!-- Straight leg pant - Modal 1 -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <!-- Close Button -->
+                        <span class="close" data-modal="modal1">&times;</span>
+
+                        <!-- Product Navigation -->
+                        <div class="Productnav">
+                            <img src="images/logo.jpg" width="50px" alt="Logo">
+                            
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="singleproduct">
+                            <!-- Product Image -->
+                            <img src="images/pant/pant1.webp" width="150px" alt="Straight Leg Jeans">
+
+                            <!-- Product Information -->
+                            <div class="product-info">
+                                <h4 class="prdinfo">Straight Leg Jeans</h4>
+                                <p>$99.00</p>
+
+                                <!-- Rating -->
+                                <div class="rating">
+                                    <span>
+                                        <h4>Rating:</h4>
+                                    </span>
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                                <!-- Form for Quantity and Add to Cart -->
+                                <form id="product-form">
+                                    <div class="size">
+                                        <h4 style="padding-right: 10px;">Size:</h4>
+                                        <select id="size" name="size" required>
+                                            <option value="" disabled selected>Select Size</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="XL">XL</option>
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Product Details -->
+                                    <div class="productinfo">
+                                        <h4>Product Info</h4>
+                                        <p>These classic Straight Leg Jeans offer a timeless fit with a mid-rise waist
+                                            and
+                                            durable denim. The straight leg cut ensures a sleek silhouette, making them
+                                            versatile for any occasion. </p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <label for="quantity1">
+                                            <h4 style="padding-right: 10px;">Quantity:</h4>
+                                        </label>
+                                        <select id="quantity1" name="quantity1" required>
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <br><br>
+                                    <button type="submit" class="btn" id="scrolltomain" onclick="validateForm()">Add to
+                                        Cart</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Denim vest -->
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="images/jacket/jacket1.webp" alt="Denim vest" class="main-image">
+                        <img src="images/jacket/jacket2.webp" alt="Denim vest alt" class="hover-image">
+                        <div class="quick-view">
+                            <a href="#" class="open-modal" data-modal="modal2" data-product-name="Denim Vest"
+                                data-product-price="150.0" data-product-image="images/jacket/jacket1.webp">Quick
+                                View</a>
+                        </div>
+                    </div>
+                    <h4>Denim vest</h4>
+                    <p>$150.0</p>
+                </div>
+                <!-- Denim vest - Modal 2 -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <!-- Close Button -->
+                        <span class="close" data-modal="modal2">&times;</span>
+
+                        <!-- Product Navigation -->
+                        <div class="Productnav">
+                            <img src="images/logo.jpg" width="50px" alt="Logo">
+
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="singleproduct">
+                            <!-- Product Image -->
+                            <img src="images/jacket/jacket1.webp" width="150px" alt="Straight Leg Jeans">
+
+                            <!-- Product Information -->
+                            <div class="product-info">
+                                <h4 class="prdinfo">Denim vest</h4>
+                                <p>$150.00</p>
+
+                                <!-- Rating -->
+                                <div class="rating">
+                                    <h4>Rating:</h4>
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+
+                                <!-- Size Selection -->
+                                <!-- Form for Quantity and Add to Cart -->
+                                <form id="product-form">
+                                    <div class="size">
+                                        <h4 style="padding-right: 10px;">Size:</h4>
+                                        <select id="size" name="size" required>
+                                            <option value="" disabled selected>Select Size</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="XL">XL</option>
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Product Info -->
+                                    <div class="productinfo">
+                                        <h4>Product Info</h4>
+                                        <p>Elevate your look with the Denim Vest, crafted from premium fabric for a
+                                            sleek,
+                                            stylish finish. This versatile piece features a tailored fit with a modern,
+                                            minimalist design.</p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <label for="quantity1">
+                                            <h4 style="padding-right: 10px;">Quantity:</h4>
+                                        </label>
+                                        <select id="quantity1" name="quantity1" required>
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                    <br><br>
+                                    <button type="submit" class="btn">Add to Cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Straight cut jeans -->
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="images/pant/straightcut1.webp" alt="Straight cut jeans" class="main-image">
+                        <img src="images/pant/straightcut2.webp" alt="Straight cut jeans alt" class="hover-image">
+                        <div class="quick-view">
+                            <a href="#" class="open-modal" data-modal="modal3" data-product-name="Straight cut jeans"
+                                data-product-price="102" data-product-image="images/pant/straightcut1.webp">Quick
+                                View</a>
+                        </div>
+                    </div>
+                    <h4>Straight cut jeans</h4>
+                    <p>$102.0</p>
+                </div>
+                <!-- Straight cut jeans Modal 3 -->
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <!-- Close Button -->
+                        <span class="close" data-modal="modal3">&times;</span>
+
+                        <!-- Product Navigation -->
+                        <div class="Productnav">
+                            <img src="images/logo.jpg" width="50px" alt="Logo">
+                    
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="singleproduct">
+                            <!-- Product Image -->
+                            <img src="images/pant/straightcut1.webp" width="150px" alt="Straight Leg Jeans">
+
+                            <!-- Product Information -->
+                            <div class="product-info">
+                                <h4 class="prdinfo">Straight cut jeans</h4>
+                                <p>$102.00</p>
+
+                                <!-- Rating -->
+                                <div class="rating">
+                                    <span>
+                                        <h4>Rating:</h4>
+                                    </span>
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                                <!-- Form for Quantity and Add to Cart -->
+                                <form id="product-form">
+                                    <div class="size">
+                                        <h4 style="padding-right: 10px;">Size:</h4>
+                                        <select id="size" name="size" required>
+                                            <option value="" disabled selected>Select Size</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="XL">XL</option>
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Product Details -->
+                                    <div class="productinfo">
+                                        <h4>Product Info</h4>
+                                        <p>Embrace classic style with our Straight Cut Jeans. Featuring a timeless
+                                            straight
+                                            leg design and mid-rise fit, these jeans offer a comfortable and versatile
+                                            option for any wardrobe. </p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <label for="quantity1">
+                                            <h4 style="padding-right: 10px;">Quantity:</h4>
+                                        </label>
+                                        <select id="quantity1" name="quantity1" required>
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <br><br>
+                                    <button type="submit" class="btn" id="scrolltomain" onclick="validateForm()">Add to
+                                        Cart</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Oversized jacket -->
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="images/jacket/menjacket1.webp" alt="Oversized jacket" class="main-image">
+                        <img src="images/jacket/menjacket2.webp" alt="Oversized jacket alt" class="hover-image">
+                        <div class="quick-view">
+                            <a href="#" class="open-modal" data-modal="modal4" data-product-name="Oversized jacket"
+                                data-product-price="102" data-product-image="images/pant/straightcut1.webp">Quick
+                                View</a>
+                        </div>
+                    </div>
+                    <h4>Oversized jacket</h4>
+                    <p>$120.0</p>
+                </div>
+                <!-- Oversized jacket modal4 -->
+                <div id="modal4" class="modal">
+                    <div class="modal-content">
+                        <!-- Close Button -->
+                        <span class="close" data-modal="modal4">&times;</span>
+
+                        <!-- Product Navigation -->
+                        <div class="Productnav">
+                            <img src="images/logo.jpg" width="50px" alt="Logo">
+                        
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="singleproduct">
+                            <!-- Product Image -->
+                            <img src="images/jacket/menjacket1.webp" width="150px" alt="Straight Leg Jeans">
+
+                            
+
+                            <!-- Product Information -->
+                            <div class="product-info">
+                                <h4 class="prdinfo">Oversized jacket</h4>
+                                <p>$120.00</p>
+
+                                <!-- Rating -->
+                                <div class="rating">
+                                    <span>
+                                        <h4>Rating:</h4>
+                                    </span>
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                                <!-- Form for Quantity and Add to Cart -->
+                                <form id="product-form">
+                                    <div class="size">
+                                        <h4 style="padding-right: 10px;">Size:</h4>
+                                        <select id="size" name="size" required>
+                                            <option value="" disabled selected>Select Size</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="XL">XL</option>
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Product Details -->
+                                    <div class="productinfo">
+                                        <h4>Product Info</h4>
+                                        <p>Stay effortlessly stylish with our Oversized Jacket. This piece offers a
+                                            relaxed,
+                                            roomy fit with a contemporary edge. Crafted from cozy, high-quality fabrick.
+                                        </p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <label for="quantity1">
+                                            <h4 style="padding-right: 10px;">Quantity:</h4>
+                                        </label>
+                                        <select id="quantity1" name="quantity1" required>
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <br><br>
+                                    <button type="submit" class="btn" id="scrolltomain" onclick="validateForm()">Add to
+                                        Cart</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- second row of products -->
+
+    <div class="categories2">
+        <div class="small-container">
+            <!-- <h2 style="margin-bottom: 20px;">MENS collections</h2> -->
+            <div class="row">
+
+                <!-- Straight leg shorts -->
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="images/shorts/short1.webp" alt="Straight leg shorts" class="main-image">
+                        <img src="images/shorts/short2.webp" alt="Straight leg shorts alt" class="hover-image">
+                        <div class="quick-view">
+                            <a href="#" class="open-modal" data-modal="modal5" data-product-name="Straight leg shorts"
+                                data-product-price="99" data-product-image="images/shorts/short1.webp">Quick View</a>
+                        </div>
+                    </div>
+                    <h4>Straight leg shorts</h4>
+                    <p>$99.0</p>
+                </div>
+                <!-- Straight leg shorts modal-->
+                <div id="modal5" class="modal">
+                    <div class="modal-content">
+                        <!-- Close Button -->
+                        <span class="close" data-modal="modal5">&times;</span>
+
+                        <!-- Product Navigation -->
+                        <div class="Productnav">
+                            <img src="images/logo.jpg" width="50px" alt="Logo">
+                    
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="singleproduct">
+                            <!-- Product Image -->
+                            <img src="images/shorts/short1.webp" width="150px" alt="Straight Leg Jeans">
+
+                            <!-- Product Information -->
+                            <div class="product-info">
+                                <h4 class="prdinfo">Straight leg shorts</h4>
+                                <p>$99.00</p>
+
+                                <!-- Rating -->
+                                <div class="rating">
+                                    <span>
+                                        <h4>Rating:</h4>
+                                    </span>
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                                <!-- Form for Quantity and Add to Cart -->
+                                <form id="product-form">
+                                    <div class="size">
+                                        <h4 style="padding-right: 10px;">Size:</h4>
+                                        <select id="size" name="size" required>
+                                            <option value="" disabled selected>Select Size</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="XL">XL</option>
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Product Details -->
+                                    <div class="productinfo">
+                                        <h4>Product Info</h4>
+                                        <p>Upgrade your summer wardrobe with our Straight Leg Shorts. Featuring a
+                                            relaxed,
+                                            straight cut and comfortable fit, these shorts offer a clean, versatile
+                                            look.
+                                            Made from breathable fabric, .</p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <label for="quantity1">
+                                            <h4 style="padding-right: 10px;">Quantity:</h4>
+                                        </label>
+                                        <select id="quantity1" name="quantity1" required>
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <br><br>
+                                    <button type="submit" class="btn" id="scrolltomain" onclick="validateForm()">Add to
+                                        Cart</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- shirt -->
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="images/shirt/shirt1.jpg" alt="Casual Shirt" class="main-image">
+                        <img src="images/shirt/shirt2.jpg" alt="Casual Shirt alt" class="hover-image">
+                        <div class="quick-view">
+                            <a href="#" class="open-modal" data-modal="modal6" data-product-name="Casual Shirt"
+                                data-product-price="200" data-product-image="images/shirt/shirt1.jpg">Quick View</a>
+                        </div>
+                    </div>
+                    <h4>Causal shirt</h4>
+                    <p>$200.0</p>
+                </div>
+                <!-- shirt modal-->
+                <div id="modal6" class="modal">
+                    <div class="modal-content">
+                        <!-- Close Button -->
+                        <span class="close" data-modal="modal6">&times;</span>
+
+                        <!-- Product Navigation -->
+                        <div class="Productnav">
+                            <img src="images/logo.jpg" width="50px" alt="Logo">
+                           
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="singleproduct">
+                            <!-- Product Image -->
+                            <img src="images/shirt/shirt1.jpg" width="150px" alt="Straight Leg Jeans">
+
+                            <!-- Product Information -->
+                            <div class="product-info">
+                                <h4 class="prdinfo">Causal shirt</h4>
+                                <p>$200.00</p>
+
+                                <!-- Rating -->
+                                <div class="rating">
+                                    <span>
+                                        <h4>Rating:</h4>
+                                    </span>
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                                <!-- Form for Quantity and Add to Cart -->
+                                <form id="product-form">
+                                    <div class="size">
+                                        <h4 style="padding-right: 10px;">Size:</h4>
+                                        <select id="size" name="size" required>
+                                            <option value="" disabled selected>Select Size</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="XL">XL</option>
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Product Details -->
+                                    <div class="productinfo">
+                                        <h4>Product Info</h4>
+                                        <p>This Casual Shirt combines comfort with style, featuring a relaxed fit and
+                                            soft
+                                            fabric. Perfect for everyday wear.</p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <label for="quantity1">
+                                            <h4 style="padding-right: 10px;">Quantity:</h4>
+                                        </label>
+                                        <select id="quantity1" name="quantity1" required>
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <br><br>
+                                    <button type="submit" class="btn" id="scrolltomain" onclick="validateForm()">Add to
+                                        Cart</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- rose -->
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="images/rose/rose1.webp" alt="Rose embroidery" class="main-image">
+                        <img src="images/rose/rose2.webp" alt="Rose embroidery alt" class="hover-image">
+                        <div class="quick-view">
+                            <a href="#" class="open-modal" data-modal="modal7" data-product-name="Rose embroidery"
+                                data-product-price="30" data-product-image="images/rose/rose1.webp">Quick View</a>
+                        </div>
+                    </div>
+                    <h4>Rose patch</h4>
+                    <p>$30.0</p>
+                </div>
+                <!-- rose  modal-->
+                <div id="modal7" class="modal">
+                    <div class="modal-content">
+                        <!-- Close Button -->
+                        <span class="close" data-modal="modal7">&times;</span>
+
+                        <!-- Product Navigation -->
+                        <div class="Productnav">
+                            <img src="images/logo.jpg" width="50px" alt="Logo">
+                           
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="singleproduct">
+                            <!-- Product Image -->
+                            <img src="images/rose/rose1.webp" width="150px" alt="Straight Leg Jeans">
+
+                            <!-- Product Information -->
+                            <div class="product-info">
+                                <h4 class="prdinfo">Rose patch</h4>
+                                <p>$30.00</p>
+
+                                <!-- Rating -->
+                                <div class="rating">
+                                    <span>
+                                        <h4>Rating:</h4>
+                                    </span>
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                                <!-- Form for Quantity and Add to Cart -->
+                                <form id="product-form">
+                                    <div class="size">
+                                        <h4 style="padding-right: 10px;">Size:</h4>
+                                        <select id="size" name="size" required>
+                                            <option value="" disabled selected>Select Size</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="XL">XL</option>
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Product Details -->
+                                    <div class="productinfo">
+                                        <h4>Product Info</h4>
+                                        <p>Add a touch of elegance with our Rose Patch. Featuring intricate rose
+                                            embroidery,
+                                            this versatile patch is perfect for customizing jackets, bags, or any
+                                            garment.
+                                            Easy to apply and stylish, it's an effortless way to enhance your look.</p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <label for="quantity1">
+                                            <h4 style="padding-right: 10px;">Quantity:</h4>
+                                        </label>
+                                        <select id="quantity1" name="quantity1" required>
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <br><br>
+                                    <button type="submit" class="btn" id="scrolltomain" onclick="validateForm()">Add to
+                                        Cart</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--------footer-------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Get Our App</h3>
+                    <p>Download the app for Android and iOS devices.</p>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo.jpg" alt="App Logo">
+                </div>
+                <div class="footer-col-3">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // move to products
+        document.getElementById("scrolltoproducts").addEventListener("click", function () {
+            document.querySelector(".categories1").scrollIntoView({ behavior: 'smooth' });
+        });
+
+        //move to products for explore button
+        document.getElementById("scrolltoexplore").addEventListener("click", function () {
+            document.querySelector(".categories1").scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var openButtons = document.querySelectorAll('.open-modal');
+            var closeButtons = document.querySelectorAll('.close');
+            var modals = document.querySelectorAll('.modal');
+
+            function openModal(modalId) {
+                var modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    modal.setAttribute('aria-hidden', 'false');
+                }
+            }
+
+            function closeModal(modalId) {
+                var modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'none';
+                    modal.setAttribute('aria-hidden', 'true');
+                }
+            }
+
+            openButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var modalId = button.getAttribute('data-modal');
+                    var productName = button.getAttribute('data-product-name');
+                    var productPrice = button.getAttribute('data-product-price');
+                    var productImageUrl = button.getAttribute('data-product-image');
+
+                    var modal = document.getElementById(modalId);
+                    var form = modal.querySelector('#product-form');
+                    form.dataset.productName = productName;
+                    form.dataset.productPrice = productPrice;
+                    form.dataset.productImage = productImageUrl;
+
+                    openModal(modalId);
+                });
+            });
+
+            closeButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var modalId = button.getAttribute('data-modal');
+                    closeModal(modalId);
+                });
+            });
+
+            window.addEventListener('click', function (event) {
+                modals.forEach(function (modal) {
+                    if (event.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+
+            document.addEventListener('submit', function (event) {
+                if (event.target.matches('#product-form')) {
+                    event.preventDefault();
+
+                    const form = event.target;
+                    const size = form.querySelector('[name="size"]').value;
+                    const quantity = form.querySelector('[name="quantity1"]').value;
+
+                    const productName = form.dataset.productName;
+                    const productPrice = parseFloat(form.dataset.productPrice);
+                    const productImageUrl = form.dataset.productImage;
+
+                    if (!size) {
+                        alert('Please select a size.');
+                        return false;
+                    }
+
+                    if (!quantity) {
+                        alert('Please select a quantity.');
+                        return false;
+                    }
+
+                    addToCart(productName, productPrice, productImageUrl, parseInt(quantity));
+                    closeModal(form.closest('.modal').id);
+                }
+            });
+        });
+
+
+        function addToCart(name, price, imageUrl, quantity) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let item = cart.find(item => item.name === name);
+
+            if (item) {
+                item.quantity += quantity; // Increment quantity if item already in cart
+            } else {
+                cart.push({ name: name, price: price, imageUrl: imageUrl, quantity: quantity });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart.`);
+        }
+
+    </script>
+
+</body>
+
+</html>
